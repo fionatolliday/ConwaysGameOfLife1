@@ -25,7 +25,6 @@ public class Board {
                 this.board[outerArray][innerArray] = deadCell.getDeadCellToken();
             }
             this.board[2][5] = liveCell.getLiveCellToken();
-
         }
 
     }
@@ -55,9 +54,30 @@ public class Board {
 
     }
 
+
+
     public String neighbourCoordinates() {
-        
-        return null;
+    String[] liveCoordinates = liveCellCoordinate().split(",");
+    Integer outerLiveCoord = Integer.parseInt(liveCoordinates[0]);
+    Integer innerLiveCoord = Integer.parseInt(liveCoordinates[1]);
+
+    Integer previousOuterCoord = (outerLiveCoord-1);
+    Integer nextOuterCoord = (outerLiveCoord+1);
+
+    Integer previousInnerCoord = (innerLiveCoord-1);
+    Integer nextInnerCoord = (innerLiveCoord+1);
+
+    String neighbouringCoordinates =
+            (previousOuterCoord + "," + previousInnerCoord + " ")+
+                    (previousOuterCoord + "," + innerLiveCoord + " ")+
+                    (previousOuterCoord + "," + nextInnerCoord + " ")+
+                    (outerLiveCoord + "," + previousInnerCoord + " ")+
+                    (outerLiveCoord + "," + nextInnerCoord + " ")+
+                    (nextOuterCoord  + "," + previousInnerCoord  + " ")+
+                    (nextOuterCoord  + "," + innerLiveCoord   + " ")+
+                    (nextOuterCoord  + "," + nextInnerCoord);
+
+        return neighbouringCoordinates;
     }
 
 
