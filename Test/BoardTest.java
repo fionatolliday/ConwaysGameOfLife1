@@ -30,5 +30,13 @@ public class BoardTest {
         Assert.assertEquals(expectedCoordinateResults, result);
     }
 
+    @Test
+    public void returnNeighboursWhoAreLiveCells() {
+        String expectedCoordinateResults ="";
+        String result = newBoard.liveNeighbourCoordinates();
+        Assert.assertEquals(expectedCoordinateResults, result);
+    }
+
+
 
 }
