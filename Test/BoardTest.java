@@ -30,11 +30,18 @@ public class BoardTest {
         Assert.assertEquals(expectedCoordinateResults, result);
     }
 
+//    @Test
+//    public void returnNeighboursWhoAreLiveCells() {
+//        String expectedCoordinateResults ="";
+//        String result = newBoard.liveNeighbourCoordinates();
+//        Assert.assertEquals(expectedCoordinateResults, result);
+//    }
+
     @Test
-    public void returnNeighboursWhoAreLiveCells() {
-        String expectedCoordinateResults ="";
-        String result = newBoard.liveNeighbourCoordinates();
-        Assert.assertEquals(expectedCoordinateResults, result);
+    public void returnHowManyLiveNeighbours() {
+        int expectedNumberOfLiveNeighbours = 0;
+        int result = newBoard.numberOfLiveNeighboursAround(2,5);
+        Assert.assertEquals(expectedNumberOfLiveNeighbours, result);
     }
 
 

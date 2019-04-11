@@ -66,7 +66,7 @@ public class Board {
     Integer previousInnerCoord = (innerLiveCoord-1);
     Integer nextInnerCoord = (innerLiveCoord+1);
 
-//    int[][] neighbourArray = new int[8][2];
+
 
     String neighbouringCoordinates =
             (previousOuterCoord + "," + previousInnerCoord + " ")+
@@ -81,36 +81,30 @@ public class Board {
         return neighbouringCoordinates;
     }
 
-    public String liveNeighbourCoordinates() {
-        String[] liveNeighCoordinates = neighbourCoordinates().split(" ");
-        String neighbour1 = liveNeighCoordinates[0];
-        String[] n1 = neighbour1.split(",");
-        String n1Outer = n1[0];
-        String n1Inner = n1[1];
+    // at 2,5 how many live neighbours are there
+    // numberOfLiveNeighboursAround(2,5)
+    public int numberOfLiveNeighboursAround(int row, int col) {
 
-        if (board[n1Outer][n1Inner] == liveCell.getLiveCellToken()){
-            n1Outer = Integer.toString(n1Outer);
-            n1Inner = Integer.toString(n1Inner);
+        int numberOfLiveNeighbours = 0;
+
+        for(int outer = row - 1; outer <= row + 1; outer++) {
+            // make sure outer value is not out of bounds
+            for(int inner = col - 1; inner <= col + 1; inner++) {
+                // make sure inner value is not out of bounds
+                // if(!board[2][5].equals(board[2][5]) we don't want to do anything to this square
+                // so move on
+                if(!board[row][col].equals(board[outer][inner])) {
+                    if(board[outer][inner] == liveCell.getLiveCellToken()) {
+                        numberOfLiveNeighbours++;
+                    }
+                }
+            }
         }
-
-
-
-//        String neighbour2 = liveNeighCoordinates[1];
-//        String neighbour3 = liveNeighCoordinates[2];
-//        String neighbour4 = liveNeighCoordinates[3];
-//        String neighbour5 = liveNeighCoordinates[4];
-//        String neighbour6 = liveNeighCoordinates[5];
-//        String neighbour7 = liveNeighCoordinates[6];
-//        String neighbour8 = liveNeighCoordinates[7];
-
-//        for (int index = 0; index < liveNeighCoordinates.length; index++){
-//            if (liveNeighCoordinates == liveCell.getLiveCellToken()){
-//
-//            }
-//        }
-//
-        return null;
+        return numberOfLiveNeighbours;
     }
+
+    
+
 
 
 

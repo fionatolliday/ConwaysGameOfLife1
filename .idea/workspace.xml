@@ -51,8 +51,6 @@
       <change afterPath="$PROJECT_DIR$/../Triangle/Triangle.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/BoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Conways1/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Conways1/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Conways1/BoardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Conways1/BoardTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MagicYearCalc2/src/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MagicYearCalc2/src/com/company/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PayslipProblem/.idea/description.html" beforeDir="false" />
@@ -77,12 +75,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="324">
+              <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
               <folding>
                 <element signature="e#234#235#0" expanded="true" />
                 <element signature="e#262#263#0" expanded="true" />
@@ -94,10 +92,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Token.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="49" />
+            <state relative-caret-position="330">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
-                <element signature="e#282#283#0" expanded="true" />
                 <element signature="e#318#319#0" expanded="true" />
               </folding>
             </state>
@@ -107,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            <state relative-caret-position="485">
+              <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -148,7 +145,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="946" />
+    <option name="height" value="947" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -156,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -173,7 +171,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,11 +178,12 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554785362633" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554946215804" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -215,7 +213,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.BoardTest.returnHowManyLiveNeighbours">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Conways1" />
@@ -259,8 +257,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BoardTest.returnHowManyLiveNeighbours" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Conways1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BoardTest" />
+      <option name="METHOD_NAME" value="returnHowManyLiveNeighbours" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BoardTest.returnHowManyLiveNeighbours" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BoardTest.returnEightNeighbouringCoordinates" />
         <item itemvalue="JUnit.BoardTest.liveCellCoordinate" />
@@ -282,67 +291,68 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BoardTest_liveCellCoordinate - 2019.04.09 at 11h 16m 08s.xml">
-      <configuration name="BoardTest.liveCellCoordinate" configurationId="JUnit" />
+    <history-entry file="BoardTest_returnHowManyLiveNeighbours - 2019.04.11 at 10h 26m 21s.xml">
+      <configuration name="BoardTest.returnHowManyLiveNeighbours" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest_liveCellCoordinate - 2019.04.09 at 11h 18m 52s.xml">
-      <configuration name="BoardTest.liveCellCoordinate" configurationId="JUnit" />
+    <history-entry file="BoardTest_returnHowManyLiveNeighbours - 2019.04.11 at 10h 38m 34s.xml">
+      <configuration name="BoardTest.returnHowManyLiveNeighbours" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest_returnEightNeighbouringCoordinates - 2019.04.09 at 11h 29m 28s.xml">
-      <configuration name="BoardTest.returnEightNeighbouringCoordinates" configurationId="JUnit" />
+    <history-entry file="BoardTest_returnHowManyLiveNeighbours - 2019.04.11 at 10h 54m 01s.xml">
+      <configuration name="BoardTest.returnHowManyLiveNeighbours" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest_liveCellCoordinate - 2019.04.09 at 11h 39m 36s.xml">
-      <configuration name="BoardTest.liveCellCoordinate" configurationId="JUnit" />
+    <history-entry file="BoardTest_returnHowManyLiveNeighbours - 2019.04.11 at 10h 55m 04s.xml">
+      <configuration name="BoardTest.returnHowManyLiveNeighbours" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest_liveCellCoordinate - 2019.04.09 at 11h 39m 46s.xml">
-      <configuration name="BoardTest.liveCellCoordinate" configurationId="JUnit" />
+    <history-entry file="BoardTest_returnHowManyLiveNeighbours - 2019.04.11 at 10h 59m 33s.xml">
+      <configuration name="BoardTest.returnHowManyLiveNeighbours" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest_returnEightNeighbouringCoordinates - 2019.04.09 at 13h 17m 52s.xml">
-      <configuration name="BoardTest.returnEightNeighbouringCoordinates" configurationId="JUnit" />
+    <history-entry file="BoardTest_returnHowManyLiveNeighbours - 2019.04.11 at 10h 59m 35s.xml">
+      <configuration name="BoardTest.returnHowManyLiveNeighbours" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest_returnEightNeighbouringCoordinates - 2019.04.09 at 13h 18m 59s.xml">
-      <configuration name="BoardTest.returnEightNeighbouringCoordinates" configurationId="JUnit" />
+    <history-entry file="BoardTest_returnHowManyLiveNeighbours - 2019.04.11 at 11h 02m 55s.xml">
+      <configuration name="BoardTest.returnHowManyLiveNeighbours" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest_returnEightNeighbouringCoordinates - 2019.04.09 at 13h 23m 34s.xml">
-      <configuration name="BoardTest.returnEightNeighbouringCoordinates" configurationId="JUnit" />
+    <history-entry file="BoardTest_returnHowManyLiveNeighbours - 2019.04.11 at 11h 02m 58s.xml">
+      <configuration name="BoardTest.returnHowManyLiveNeighbours" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest_returnEightNeighbouringCoordinates - 2019.04.09 at 13h 25m 11s.xml">
-      <configuration name="BoardTest.returnEightNeighbouringCoordinates" configurationId="JUnit" />
+    <history-entry file="BoardTest_returnHowManyLiveNeighbours - 2019.04.11 at 11h 24m 55s.xml">
+      <configuration name="BoardTest.returnHowManyLiveNeighbours" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BoardTest_returnEightNeighbouringCoordinates - 2019.04.09 at 13h 26m 53s.xml">
-      <configuration name="BoardTest.returnEightNeighbouringCoordinates" configurationId="JUnit" />
+    <history-entry file="BoardTest_returnHowManyLiveNeighbours - 2019.04.11 at 11h 27m 23s.xml">
+      <configuration name="BoardTest.returnHowManyLiveNeighbours" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="946" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="947" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2045177" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20695971" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3290398" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25761124" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39929742" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36023393" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988304" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.102923974" />
+      <window_info anchor="right" x="0" y="0" width="370" height="747" id="Documentation" side_tool="true" weight="0.32967034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -403,19 +413,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DeadToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeadToken.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -423,13 +421,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/MainTest.java" />
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -437,45 +429,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BoardTest.groovy">
+    <entry file="file://$PROJECT_DIR$/src/BoardTest.groovy" />
+    <entry file="file://$PROJECT_DIR$/src/tests/BoardTest.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="308">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/BoardTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="49" />
-          <folding>
-            <element signature="e#282#283#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="158">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state relative-caret-position="485">
+          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#318#319#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="324">
+          <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
           <folding>
             <element signature="e#234#235#0" expanded="true" />
             <element signature="e#262#263#0" expanded="true" />
