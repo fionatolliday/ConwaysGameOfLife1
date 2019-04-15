@@ -25,6 +25,11 @@ public class Board {
                 this.board[outerArray][innerArray] = deadCell.getDeadCellToken();
             }
             this.board[2][5] = liveCell.getLiveCellToken();
+//            this.board[2][6] = liveCell.getLiveCellToken();
+//            this.board[3][5] = liveCell.getLiveCellToken();
+//            this.board[3][6] = liveCell.getLiveCellToken();
+//            this.board[4][5] = liveCell.getLiveCellToken();
+//            this.board[4][4] = liveCell.getLiveCellToken();
         }
 
     }
@@ -37,49 +42,9 @@ public class Board {
             }
             System.out.println();
         }
-    }
-
-    public String liveCellCoordinate() {
-        String outerCoord = "";
-        String innerCoord = "";
-        for (int outerArray = 0; outerArray < board.length; outerArray++) {
-            for (int innerArray = 0; innerArray < board[0].length; innerArray++) {
-                if (board[outerArray][innerArray] == liveCell.getLiveCellToken()){
-                    outerCoord = Integer.toString(outerArray);
-                    innerCoord = Integer.toString(innerArray);
-                }
-            }
-
-        } return outerCoord + "," + innerCoord;
 
     }
 
-
-    public String neighbourCoordinates() {
-    String[] liveCoordinates = liveCellCoordinate().split(",");
-    Integer outerLiveCoord = Integer.parseInt(liveCoordinates[0]);
-    Integer innerLiveCoord = Integer.parseInt(liveCoordinates[1]);
-
-    Integer previousOuterCoord = (outerLiveCoord-1);
-    Integer nextOuterCoord = (outerLiveCoord+1);
-
-    Integer previousInnerCoord = (innerLiveCoord-1);
-    Integer nextInnerCoord = (innerLiveCoord+1);
-
-
-
-    String neighbouringCoordinates =
-            (previousOuterCoord + "," + previousInnerCoord + " ")+
-                    (previousOuterCoord + "," + innerLiveCoord + " ")+
-                    (previousOuterCoord + "," + nextInnerCoord + " ")+
-                    (outerLiveCoord + "," + previousInnerCoord + " ")+
-                    (outerLiveCoord + "," + nextInnerCoord + " ")+
-                    (nextOuterCoord  + "," + previousInnerCoord  + " ")+
-                    (nextOuterCoord  + "," + innerLiveCoord   + " ")+
-                    (nextOuterCoord  + "," + nextInnerCoord);
-
-        return neighbouringCoordinates;
-    }
 
     // at 2,5 how many live neighbours are there
     // numberOfLiveNeighboursAround(2,5)
@@ -93,17 +58,88 @@ public class Board {
                 // make sure inner value is not out of bounds
                 // if(!board[2][5].equals(board[2][5]) we don't want to do anything to this square
                 // so move on
-                if(!board[row][col].equals(board[outer][inner])) {
-                    if(board[outer][inner] == liveCell.getLiveCellToken()) {
+                if (row == outer && col == inner){
+                    continue;
+                } else if(board[outer][inner] == liveCell.getLiveCellToken()) {
                         numberOfLiveNeighbours++;
                     }
-                }
+
             }
         }
         return numberOfLiveNeighbours;
     }
 
-    
+    public void whatWillTheNextStateBe(int row, int col) {
+//        less than 2 live neighbours = dies
+//        more than 3 live neighbours = dies
+//        if 2 or 3 live neighbours = no change
+//        if there is a dead cell with 3 live neighbours, it becomes live
+
+        if(board[row][col] == liveCell.getLiveCellToken()){
+            if (numberOfLiveNeighboursAround(row, col) < 2 || numberOfLiveNeighboursAround(row,
+                    col) > 3) {
+                board[row][col] = deadCell.getDeadCellToken();
+            }
+        } else if(board[row][col] == deadCell.getDeadCellToken()) {
+            if (numberOfLiveNeighboursAround(row, col) == 3){
+                board[row][col] = liveCell.getLiveCellToken();
+            }
+
+        }
+
+
+
+    }
+
+
+
+
+
+
+    //    public String liveCellCoordinate() {
+//        String outerCoord = "";
+//        String innerCoord = "";
+//        for (int outerArray = 0; outerArray < board.length; outerArray++) {
+//            for (int innerArray = 0; innerArray < board[0].length; innerArray++) {
+//                if (board[outerArray][innerArray] == liveCell.getLiveCellToken()){
+//                    outerCoord = Integer.toString(outerArray);
+//                    innerCoord = Integer.toString(innerArray);
+//                }
+//            }
+//
+//        } return outerCoord + "," + innerCoord;
+//
+//    }
+
+
+
+//    public String neighbourCoordinates() {
+//    String[] liveCoordinates = liveCellCoordinate().split(",");
+//    Integer outerLiveCoord = Integer.parseInt(liveCoordinates[0]);
+//    Integer innerLiveCoord = Integer.parseInt(liveCoordinates[1]);
+//
+//    Integer previousOuterCoord = (outerLiveCoord-1);
+//    Integer nextOuterCoord = (outerLiveCoord+1);
+//
+//    Integer previousInnerCoord = (innerLiveCoord-1);
+//    Integer nextInnerCoord = (innerLiveCoord+1);
+//
+//
+//
+//    String neighbouringCoordinates =
+//            (previousOuterCoord + "," + previousInnerCoord + " ")+
+//                    (previousOuterCoord + "," + innerLiveCoord + " ")+
+//                    (previousOuterCoord + "," + nextInnerCoord + " ")+
+//                    (outerLiveCoord + "," + previousInnerCoord + " ")+
+//                    (outerLiveCoord + "," + nextInnerCoord + " ")+
+//                    (nextOuterCoord  + "," + previousInnerCoord  + " ")+
+//                    (nextOuterCoord  + "," + innerLiveCoord   + " ")+
+//                    (nextOuterCoord  + "," + nextInnerCoord);
+//
+//        return neighbouringCoordinates;
+//    }
+
+
 
 
 

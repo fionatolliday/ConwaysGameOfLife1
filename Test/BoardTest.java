@@ -16,19 +16,19 @@ public class BoardTest {
     public void printBoard() {
     }
 
-    @Test
-    public void liveCellCoordinate() {
-        String expectedCoordinateResults = "2,5";
-        String result = newBoard.liveCellCoordinate();
-        Assert.assertEquals(expectedCoordinateResults, result);
-    }
-
-    @Test
-    public void returnEightNeighbouringCoordinates() {
-        String expectedCoordinateResults ="1,4 1,5 1,6 2,4 2,6 3,4 3,5 3,6";
-        String result = newBoard.neighbourCoordinates();
-        Assert.assertEquals(expectedCoordinateResults, result);
-    }
+//    @Test
+//    public void liveCellCoordinate() {
+//        String expectedCoordinateResults = "2,5";
+//        String result = newBoard.liveCellCoordinate();
+//        Assert.assertEquals(expectedCoordinateResults, result);
+//    }
+//
+//    @Test
+//    public void returnEightNeighbouringCoordinates() {
+//        String expectedCoordinateResults ="1,4 1,5 1,6 2,4 2,6 3,4 3,5 3,6";
+//        String result = newBoard.neighbourCoordinates();
+//        Assert.assertEquals(expectedCoordinateResults, result);
+//    }
 
 //    @Test
 //    public void returnNeighboursWhoAreLiveCells() {
@@ -45,5 +45,11 @@ public class BoardTest {
     }
 
 
+    @Test
+    public void numberOfLiveNeighboursAround() {
+    }
 
+    @Test
+    public void whatWillTheNextStateBe() {
+    }
 }
