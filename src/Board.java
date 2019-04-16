@@ -1,3 +1,5 @@
+import java.io.OptionalDataException;
+
 public class Board {
 
     //    create a new instance of each token to make it usable on the board
@@ -52,9 +54,9 @@ public class Board {
 
         int numberOfLiveNeighbours = 0;
 
-        for(int outer = row - 1; outer <= row + 1; outer++) {
+        for(int outer = row - 1; outer <= col + 1; outer++) {
             // make sure outer value is not out of bounds
-            for(int inner = col - 1; inner <= col + 1; inner++) {
+            for(int inner = - 1; inner <= + 1; inner++) {
                 // make sure inner value is not out of bounds
                 // if(!board[2][5].equals(board[2][5]) we don't want to do anything to this square
                 // so move on
@@ -69,27 +71,69 @@ public class Board {
         return numberOfLiveNeighbours;
     }
 
-    public void whatWillTheNextStateBe(int row, int col) {
-//        less than 2 live neighbours = dies
-//        more than 3 live neighbours = dies
-//        if 2 or 3 live neighbours = no change
-//        if there is a dead cell with 3 live neighbours, it becomes live
+    String[][] futureState = new String[10][10];
+    public void nextState() {
+//        Create a new array to house the next state
 
-        if(board[row][col] == liveCell.getLiveCellToken()){
-            if (numberOfLiveNeighboursAround(row, col) < 2 || numberOfLiveNeighboursAround(row,
-                    col) > 3) {
-                board[row][col] = deadCell.getDeadCellToken();
-            }
-        } else if(board[row][col] == deadCell.getDeadCellToken()) {
-            if (numberOfLiveNeighboursAround(row, col) == 3){
-                board[row][col] = liveCell.getLiveCellToken();
-            }
+//        Go through every cell
+        for (int outer = 0; outer < futureState.length; outer++){
+            for (int inner = 0; inner < futureState.length; inner++){
 
+//         Now, i have the number of live neighbours above, so now need to apply that here, but
+//         need to use those neighbours to implement the life and death rules
+                if(board[outer][inner] == liveCell.getLiveCellToken()){
+                    if (numberOfLiveNeighboursAround(outer, inner) < 2 || numberOfLiveNeighboursAround(outer,
+                            inner) > 3) {
+                        futureState[outer][inner] = deadCell.getDeadCellToken();
+                    }
+                } else if(board[outer][inner] == deadCell.getDeadCellToken()) {
+                    if (numberOfLiveNeighboursAround(outer, inner) == 3){
+                        futureState[outer][inner] = liveCell.getLiveCellToken();
+                    }
+
+                }
+
+            }
         }
 
 
 
+
     }
+
+    public void printNextState() {
+        for (int outerArray = 0; outerArray < futureState.length; outerArray++) {
+            for (int innerArray = 0; innerArray < futureState.length; innerArray++) {
+                System.out.print(futureState[outerArray][innerArray]);
+            }
+            System.out.println(futureState);
+        }
+
+    }
+
+
+
+//    public void whatWillTheNextStateBe(int row, int col) {
+////        less than 2 live neighbours = dies
+////        more than 3 live neighbours = dies
+////        if 2 or 3 live neighbours = no change
+////        if there is a dead cell with 3 live neighbours, it becomes live
+//
+//        if(board[row][col] == liveCell.getLiveCellToken()){
+//            if (numberOfLiveNeighboursAround(row, col) < 2 || numberOfLiveNeighboursAround(row,
+//                    col) > 3) {
+//                board[row][col] = deadCell.getDeadCellToken();
+//            }
+//        } else if(board[row][col] == deadCell.getDeadCellToken()) {
+//            if (numberOfLiveNeighboursAround(row, col) == 3){
+//                board[row][col] = liveCell.getLiveCellToken();
+//            }
+//
+//        }
+//
+//
+//
+//    }
 
 
 

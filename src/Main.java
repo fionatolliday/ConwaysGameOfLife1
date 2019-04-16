@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         Board gameBoard = new Board();
         Scanner userInput = new Scanner(System.in);
@@ -11,16 +11,10 @@ public class Main {
         gameBoard.printBoard();
         System.out.println();
 
-        for (int outerArray = 0; outerArray < gameBoard.getBoard().length; outerArray++) {
-            for (int innerArray = 0; innerArray < gameBoard.getBoard()[0].length; innerArray++) {
-                System.out.print(gameBoard.getBoard()[outerArray][innerArray]);
-            }
-            gameBoard.whatWillTheNextStateBe(2, 5);
-            gameBoard.printBoard();
-            System.out.println();
-        }
+//      Display next generation
+        gameBoard.printNextState();
 
-    }
+        }
 
 }
 
